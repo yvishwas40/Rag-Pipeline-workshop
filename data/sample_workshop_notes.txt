@@ -1,0 +1,25 @@
+WORKSHOP NOTES: RETRIEVAL-AUGMENTED GENERATION (RAG)
+
+What is RAG?
+RAG stands for Retrieval-Augmented Generation. It is a simple idea: before we ask a language model to answer a question, we first search a trusted document collection for relevant passages, then we give those passages to the model as extra context.
+
+Why not just use an LLM alone?
+A plain LLM only knows what it learned during training. It can be wrong about facts, dates, or your private documents. RAG reduces guessing by grounding answers in retrieved text you control.
+
+What is chunking?
+Chunking means splitting a long document into smaller pieces (chunks). Smaller chunks help the search step find the exact paragraph that matches a user question, instead of retrieving a huge block of unrelated text.
+
+Why embeddings?
+An embedding is a list of numbers (a vector) that represents the meaning of text. Similar ideas tend to have similar vectors, so we can compare a question vector to chunk vectors to find the best matches.
+
+What is a vector database?
+A vector database stores many vectors and can quickly find the closest ones to a query vector. That closest-neighbor search is the "retrieval" part of RAG.
+
+Why Pinecone?
+Pinecone is a managed vector database, which means students can focus on the RAG idea instead of running their own search infrastructure.
+
+Similarity search (cosine similarity)
+Cosine similarity measures the angle between two vectors. If two texts are semantically similar, their vectors often point in a similar direction, so cosine similarity is high.
+
+How retrieval improves accuracy
+Retrieval gives the model specific evidence to cite and follow. That evidence is usually more reliable than the model trying to recall facts from memory alone.
