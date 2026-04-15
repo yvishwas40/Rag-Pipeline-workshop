@@ -1,6 +1,6 @@
 # RAG workshop chatbot (beginner)
 
-Tiny **Retrieval-Augmented Generation** demo: **Gemini** (embeddings + answers) and **Pinecone** (vector search). Good for teaching the basic flow without extra frameworks.
+Tiny **Retrieval-Augmented Generation** demo: **Gemini** (embeddings + answers) and **Pinecone** (vector search). 
 
 ## Architecture (simple)
 
