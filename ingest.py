@@ -13,12 +13,15 @@ import config
 import rag_pipeline
 from utils import chunk_text, load_document
 
+# Folder where ingest.py lives (so relative DOCUMENT_PATH like "data/file.pdf" works).
+_PROJECT_ROOT = Path(__file__).resolve().parent
+
 
 def main():
     # ----- Step 1: find the file from config -----
     path = Path(config.DOCUMENT_PATH).expanduser()
     if not path.is_absolute():
-        path = config.HERE / path
+        path = _PROJECT_ROOT / path
     path = path.resolve()
 
     if not path.is_file():

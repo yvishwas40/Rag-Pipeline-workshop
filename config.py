@@ -34,7 +34,7 @@ EMBEDDING_DIMENSION = int(os.environ.get("EMBEDDING_DIMENSION", "768"))
 # How we cut long text into smaller pieces before embedding.
 CHUNK_SIZE_CHARS = int(os.environ.get("CHUNK_SIZE_CHARS", "900"))
 CHUNK_OVERLAP_CHARS = int(os.environ.get("CHUNK_OVERLAP_CHARS", "150"))
-
+DOCUMENT_PATH = os.environ.get("DOCUMENT_PATH", "data/insurance.pdf").strip()
 # How many text chunks we fetch for each question.
 TOP_K = int(os.environ.get("TOP_K", "4"))
 
